@@ -16,5 +16,5 @@ export const deleteEvent = async (id: string) => {
 };
 
 export const toggleArchive = async (id: string) => {
-  return await api.patch(`/events/${id}/archive`);
+  return await api.patch(`/events/${id}`);
 };

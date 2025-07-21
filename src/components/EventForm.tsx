@@ -9,16 +9,16 @@ export const EventForm = ({ onSubmit }: Props) => {
   const [title, setTitle] = useState("");
   const [date, setDate] = useState("");
   const [time, setTime] = useState("");
-  const [description, setDescription] = useState("");
+  const [notes, setNotes] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!title || !date || !time) return;
-    onSubmit({ title, date, time, description });
+    onSubmit({ title, date, time, notes });
     setTitle("");
     setDate("");
     setTime("");
-    setDescription("");
+    setNotes("");
   };
   return (
     <form onSubmit={handleSubmit} className="space-y-3">
@@ -46,8 +46,8 @@ export const EventForm = ({ onSubmit }: Props) => {
       />
       <textarea
         placeholder="Notes (optional)"
-        value={description}
-        onChange={(e) => setDescription(e.target.value)}
+        value={notes}
+        onChange={(e) => setNotes(e.target.value)}
         className="w-full border p-2 rounded"
       ></textarea>
       <button
