@@ -13,7 +13,7 @@ export const EventCard = ({ event, onDelete, onToggleArchive }: Props) => {
       <h2 className="text-lg font-semibold">{event.title}</h2>
       <p>Date: {formatDate(event.date)}</p>
       <p>Time: {formatTime(event.time)}</p>
-      {event.description && <p>Notes: {event.description}</p>}
+      {event.notes && <p>Notes: {event.notes}</p>}
       <p>
         Category: <span className="font-medium">{event.category}</span>
       </p>

@@ -21,7 +21,11 @@ export const EventForm = ({ onSubmit }: Props) => {
     setNotes("");
   };
   return (
-    <form onSubmit={handleSubmit} className="space-y-3">
+    <form
+      onSubmit={handleSubmit}
+      className="space-y-3 mt-6 bg-white p-4 rounded shadow"
+    >
+      <h2 className="text-xl font-semibold">Add New Event</h2>
       <input
         type="text"
         placeholder="Title"
@@ -50,6 +54,7 @@ export const EventForm = ({ onSubmit }: Props) => {
         onChange={(e) => setNotes(e.target.value)}
         className="w-full border p-2 rounded"
       ></textarea>
+
       <button
         type="submit"
         className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
